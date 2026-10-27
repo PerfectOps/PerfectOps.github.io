@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101820" />
+    <title>Vector — сайт и приложение магазина под вашим брендом</title>
+    <meta
+      name="description"
+      content="Сайт и мобильное приложение для магазина техники под вашим брендом. Общий каталог, цены, остатки и заказы в одной панели. Запуск со специалистом Vector."
+    />
+    <meta
+      property="og:title"
+      content="Vector — сайт и приложение магазина под вашим брендом"
+    />
+    <meta
+      property="og:description"
+      content="Сайт и приложение для iPhone и Android под вашим брендом. Каталог, цены, остатки и заказы — в одной панели управления."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="./assets/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="preload"
+      href="./assets/manrope-bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+    <script src="./scenarios.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">К содержанию</a>
+    <div class="hero-shell">
+      <header class="header container">
+        <a class="wordmark" href="#" aria-label="Vector, на главную"
+          ><img
+            class="brand-logo"
+            src="./assets/vector-logo-dark.png"
+            width="640"
+            height="213"
+            alt="Vector"
+        /></a>
+        <nav aria-label="Основная навигация">
+          <a href="#platform">Что вы получаете</a
+          ><a href="#launch">Как запустить</a><a href="#questions">Вопросы</a>
+        </nav>
+        <a class="nav-cta" href="#start"
+          >Обсудить запуск<svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M6 18 18 6M6 6h12v12" /></svg
+        ></a>
+      </header>
+    </div>
+    <main id="main">
+      <div class="hero-shell">
+        <section class="hero container" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="hero-note">
+              <span aria-hidden="true">↗</span> Vector — платформа для
+              интернет-магазинов
+            </p>
+            <h1 id="hero-title">
+              Ваш магазин<br /><span>На сайте и в приложении.</span>
+            </h1>
+            <p class="hero-lead">
+              Сайт и мобильное приложение для iPhone и Android под вашим
+              брендом. Управляйте каталогом, ценами, остатками и заказами из
+              одной панели.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#start"
+                >Обсудить запуск<svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M5 12h14M13 6l6 6-6 6" /></svg></a
+              ><a class="quiet-link" href="#platform"
+                >Что получает ваш магазин</a
+              >
+            </div>
+            <p class="hero-footnote">
+              Запуск со специалистом Vector.<br />Ваш логотип, ваш каталог и ваш
+              домен.
+            </p>
+          </div>
+          <div class="hero-showcase">
+            <div class="showcase-caption">
+              <span>Сайт и приложение вашего магазина</span
+              ><span>Пример оформления</span>
+            </div>
+            <div class="scenario-controls" id="scenario-controls" hidden>
+              <div role="group" aria-label="Пример ассортимента">
+                <button type="button" data-scenario="tech" aria-pressed="true">
+                  Техника
+                </button>
+                <button
+                  type="button"
+                  data-scenario="fashion"
+                  aria-pressed="false"
+                >
+                  Одежда
+                </button>
+                <button type="button" data-scenario="home" aria-pressed="false">
+                  Для дома
+                </button>
+              </div>
+              <button type="button" id="pause-scenarios" aria-pressed="false">
+                Пауза
+              </button>
+            </div>
+            <div class="showcase-scene" id="showcase-scene">
+              <div class="concept-store" id="concept-store">
+                <div class="store-header">
+                  <span class="store-wordmark"
+                    ><i aria-hidden="true"></i>store.</span
+                  >
+                  <div><span>Каталог</span><span>О магазине</span></div>
+                  <span class="store-cart" aria-live="polite"
+                    >Корзина <b id="cart-count">0</b></span
+                  >
+                </div>
+                <div class="store-hero">
+                  <div>
+                    <span class="store-small">Созданы для вашего ритма</span>
+                    <h2>Больше звука.<br />Меньше шума.</h2>
+                    <p>Техника, с которой<br />каждый день лучше.</p>
+                    <span class="store-fake-link"
+                      >Найти своё
+                      <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                    ></span>
+                  </div>
+                  <img
+                    src="./assets/concept-headphones.webp"
+                    width="720"
+                    height="720"
+                    alt="Концепт карточки беспроводных наушников"
+                    fetchpriority="high"
+                  />
+                </div>
+                <div class="store-products">
+                  <div class="store-collection-title">
+                    <strong>Выбор за вами</strong><span>Подборка товаров</span>
+                  </div>
+                  <div class="mini-products">
+                    <article>
+                      <div class="mini-image">
+                        <img
+                          src="./assets/concept-phone.webp"
+                          width="720"
+                          height="720"
+                          alt="Иллюстрация смартфона"
+                          fetchpriority="high"
+                        /><button
+                          class="demo-add"
+                          type="button"
+                          data-product="Смартфон"
+                          aria-label="Добавить смартфон в демо-корзину"
+                          hidden
+                        >
+                          +
+                        </button>
+                      </div>
+                      <span>Смартфон</span><strong>49 990 ₽</strong>
+                    </article>
+                    <article>
+                      <div class="mini-image">
+                        <img
+                          src="./assets/concept-headphones.webp"
+                          width="720"
+                          height="720"
+                          alt="Иллюстрация наушников"
+                        /><button
+                          class="demo-add"
+                          type="button"
+                          data-product="Наушники"
+                          aria-label="Добавить наушники в демо-корзину"
+                          hidden
+                        >
+                          +
+                        </button>
+                      </div>
+                      <span>Наушники</span><strong>6 990 ₽</strong>
+                    </article>
+                    <article>
+                      <div class="mini-image">
+                        <img
+                          src="./assets/concept-charger.webp"
+                          width="720"
+                          height="720"
+                          alt="Иллюстрация зарядного устройства"
+                        /><button
+                          class="demo-add"
+                          type="button"
+                          data-product="Зарядное устройство"
+                          aria-label="Добавить зарядное устройство в демо-корзину"
+                          hidden
+                        >
+                          +
+                        </button>
+                      </div>
+                      <span>Зарядное устройство</span><strong>2 990 ₽</strong>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <figure
+                class="app-showcase"
+                aria-labelledby="app-concept-caption"
+              >
+                <div class="phone-frame">
+                  <div class="phone-screen">
+                    <div class="phone-status" aria-hidden="true">
+                      <span>9:41</span><span class="phone-island"></span
+                      ><span>▰</span>
+                    </div>
+                    <div class="app-header">
+                      <span class="app-wordmark">store<span>.</span></span
+                      ><span class="app-avatar" aria-hidden="true">S</span>
+                    </div>
+                    <div class="app-search">
+                      Поиск по каталогу <span aria-hidden="true">⌕</span>
+                    </div>
+                    <div class="app-promo">
+                      <span>В вашем ритме</span
+                      ><strong>Больше<br />любимого звука.</strong
+                      ><img
+                        src="./assets/concept-headphones.webp"
+                        width="720"
+                        height="720"
+                        alt="Наушники в концепте мобильного приложения"
+                      /><span class="app-promo-link"
+                        >Смотреть подборку
+                        <span aria-hidden="true">↗</span></span
+                      >
+                    </div>
+                    <div class="app-selection">
+                      <strong>Вам понравится</strong>
+                      <div>
+                        <img
+                          src="./assets/concept-phone.webp"
+                          width="720"
+                          height="720"
+                          alt=""
+                        /><span>Смартфон<small>49 990 ₽</small></span
+                        ><span class="app-item-plus" aria-hidden="true">+</span>
+                      </div>
+                    </div>
+                    <div class="app-tabbar" aria-hidden="true">
+                      <span class="app-tab-active"
+                        ><svg viewBox="0 0 24 24">
+                          <path d="m3 10 9-7 9 7v11h-6v-7H9v7H3Z" /></svg
+                        >Главная</span
+                      >
+                      <span
+                        ><svg viewBox="0 0 24 24">
+                          <path
+                            d="M3 3h7v7H3Zm11 0h7v7h-7ZM3 14h7v7H3Zm11 0h7v7h-7Z"
+                          /></svg
+                        >Каталог</span
+                      >
+                      <span
+                        ><svg viewBox="0 0 24 24">
+                          <path
+                            d="M3 4h2l3 12h11l2-8H6M9 21h.01M18 21h.01"
+                          /></svg
+                        >Корзина</span
+                      >
+                      <span
+                        ><svg viewBox="0 0 24 24">
+                          <circle cx="12" cy="7" r="4" />
+                          <path d="M4 22v-3a8 8 0 0 1 16 0v3" /></svg
+                        >Профиль</span
+                      >
+                    </div>
+                    <div class="phone-home" aria-hidden="true"></div>
+                  </div>
+                </div>
+                <figcaption id="app-concept-caption">
+                  Мобильное приложение<span>iPhone и Android · концепт</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="showcase-controls">
+              <fieldset id="brand-picker" hidden>
+                <legend>Ваш цвет</legend>
+                <button
+                  type="button"
+                  data-brand="blue"
+                  aria-label="Синий цвет бренда"
+                  aria-pressed="true"
+                ></button
+                ><button
+                  type="button"
+                  data-brand="green"
+                  aria-label="Зелёный цвет бренда"
+                  aria-pressed="false"
+                ></button
+                ><button
+                  type="button"
+                  data-brand="orange"
+                  aria-label="Оранжевый цвет бренда"
+                  aria-pressed="false"
+                ></button>
+              </fieldset>
+              <button id="reset-demo" class="reset-demo" type="button" hidden>
+                Сбросить корзину</button
+              ><span class="concept-disclaimer"
+                >Концепты сайта и приложения. Товары и цены — демо.</span
+              >
+            </div>
+            <p id="demo-status" role="status" class="demo-status"></p>
+          </div>
+        </section>
+        <div class="hero-bottom container">
+          <p>
+            Покупатели заказывают на сайте и в приложении.<br />Команда работает
+            в одной панели.
+          </p>
+          <div>
+            <span>Каталог и фильтры</span><span>Цены и остатки</span
+            ><span>Заказы и команда</span>
+          </div>
+        </div>
+      </div>
+      <section
+        id="platform"
+        class="platform section container"
+        aria-labelledby="platform-title"
+      >
+        <div class="section-title">
+          <div>
+            <p class="section-note">
+              Сайт, приложение и управление в одной системе
+            </p>
+            <h2 id="platform-title">Что получает<br />ваш магазин</h2>
+          </div>
+          <p>
+            На сайте и в приложении покупатели выбирают и заказывают товары. В
+            общей панели сотрудники обновляют ассортимент, цены и обрабатывают
+            заказы.
+          </p>
+        </div>
+        <div class="platform-grid">
+          <article class="catalog-feature">
+            <div class="feature-copy">
+              <span>01 / Ассортимент</span>
+              <h3>Покажите каждый<br />вариант товара.</h3>
+              <p>
+                Отдельные цены и остатки для разных цветов, памяти и б/у
+                экземпляров. Поиск и фильтры помогают покупателю найти нужное.
+              </p>
+            </div>
+            <div
+              class="inventory-concept"
+              aria-label="Пример организации ассортимента, демонстрационные данные"
+            >
+              <div class="inventory-title">
+                <strong>Ваш каталог</strong><span>Пример данных</span>
+              </div>
+              <div class="inventory-head">
+                <span>Товар</span><span>Варианты</span><span>Наличие</span>
+              </div>
+              <div class="inventory-row">
+                <img
+                  src="./assets/concept-phone.webp"
+                  width="720"
+                  height="720"
+                  alt=""
+                />
+                <div><strong>Смартфон</strong><small>Память, цвет</small></div>
+                <span>128 / 256 ГБ</span><span>В наличии</span>
+              </div>
+              <div class="inventory-row">
+                <img
+                  src="./assets/concept-headphones.webp"
+                  width="720"
+                  height="720"
+                  alt=""
+                />
+                <div>
+                  <strong>Наушники</strong><small>Цвет, подключение</small>
+                </div>
+                <span>Графит</span><span>В наличии</span>
+              </div>
+              <div class="inventory-row">
+                <img
+                  src="./assets/concept-charger.webp"
+                  width="720"
+                  height="720"
+                  alt=""
+                />
+                <div>
+                  <strong>Зарядное устройство</strong
+                  ><small>Мощность, разъём</small>
+                </div>
+                <span>30 Вт</span><span>В наличии</span>
+              </div>
+            </div>
+          </article>
+          <article class="brand-feature">
+            <span>02 / Ваш бренд</span>
+            <h3>Ваш сайт.<br />Ваше приложение.<br />Ваш бренд.</h3>
+            <p>
+              Сайт на вашем домене и приложение с вашим названием, логотипом и
+              оформлением. Можно начать с сайта, приложения или обоих каналов.
+            </p>
+            <div class="brand-wordmark" aria-hidden="true">
+              Your<br />store<span>↗</span>
+            </div>
+          </article>
+          <article class="orders-feature">
+            <div class="feature-copy">
+              <span>03 / Продажи</span>
+              <h3>Принимайте заказы<br />с сайта и приложения.</h3>
+              <p>
+                Покупатель собирает корзину и оставляет контакты. Заказ с
+                составом и суммой появляется в панели вашего магазина.
+              </p>
+            </div>
+            <div class="order-flow">
+              <span>Выбрать</span><i aria-hidden="true">→</i
+              ><span>Оформить</span><i aria-hidden="true">→</i
+              ><span>Получить заказ</span>
+            </div>
+          </article>
+          <article class="team-feature">
+            <div class="feature-copy">
+              <span>04 / Управление</span>
+              <h3>Ведите магазин<br />без разработчика.</h3>
+              <p>
+                Меняйте товары, цены и остатки, обновляйте баннеры и переводите
+                заказы в нужный статус через панель управления.
+              </p>
+            </div>
+            <div class="team-tools">
+              <span>Каталог</span><span>Заказы</span><span>Контент</span
+              ><span>Настройки</span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="statement-section">
+        <div class="container statement">
+          <p>Для магазинов техники:<br />новой, б/у и аксессуаров.</p>
+          <h2>
+            Покупателям — магазин.<br />Команде — управление.<br />Вам —
+            контроль.
+          </h2>
+          <a
+            class="round-link"
+            href="#start"
+            aria-label="Перейти к подключению Vector"
+            ><svg aria-hidden="true" viewBox="0 0 40 40">
+              <path d="M8 32 32 8M8 8h24v24" /></svg
+          ></a>
+        </div>
+      </section>
+      <section
+        id="launch"
+        class="launch section container"
+        aria-labelledby="launch-title"
+      >
+        <div class="section-title">
+          <div>
+            <p class="section-note">Магазин создаёт специалист Vector</p>
+            <h2 id="launch-title">Как запустить магазин<br />на Vector</h2>
+          </div>
+          <p>
+            Обсудим ваш ассортимент, настроим магазин и подготовим его к работе.
+            Самостоятельно устанавливать платформу не нужно.
+          </p>
+        </div>
+        <ol class="launch-steps">
+          <li>
+            <span class="step-number">01</span>
+            <h3>Вы рассказываете<br />о магазине</h3>
+            <p>
+              Что продаёте, где храните каталог и какой сайт хотите получить.
+              Согласуем нужные функции, стоимость и этапы запуска.
+            </p>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <h3>Мы настраиваем сайт<br />и выдаём доступ</h3>
+            <p>
+              Оформляем магазин под ваш бренд, помогаем подготовить каталог и
+              создаём учётные записи сотрудников в панели.
+            </p>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <h3>Проверяем магазин<br />перед запуском</h3>
+            <p>
+              Готовим домен и размещение сайта, согласуем оплату и доставку.
+              Проверяем тестовый заказ до начала реальных продаж.
+            </p>
+          </li>
+        </ol>
+      </section>
+      <section
+        id="questions"
+        class="faq section container"
+        aria-labelledby="faq-title"
+      >
+        <h2 id="faq-title">О подключении<br />и работе с Vector</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Что значит подключить Vector?</summary>
+            <p>
+              Создать интернет-магазин вашего бизнеса на платформе Vector.
+              Покупатели будут заходить на ваш сайт или в приложение, а
+              сотрудники — в панель управления своим каталогом и заказами.
+              Магазин создаёт специалист; самостоятельной регистрации пока нет.
+            </p>
+          </details>
+          <details>
+            <summary>Можно получить и сайт, и мобильное приложение?</summary>
+            <p>
+              Да. Vector поддерживает сайт и отдельные приложения для iPhone и
+              Android под брендом вашего магазина. Они используют общий каталог
+              и панель управления. Можно запустить оба канала или начать с
+              одного. Для приложений нужны отдельная сборка и подготовка к
+              публикации в App Store и Google Play. Размещение в магазинах
+              приложений пока не выполнено; состав работ, стоимость и этапы
+              запуска согласуем заранее.
+            </p>
+          </details>
+          <details>
+            <summary>Нужен ли уже готовый сайт?</summary>
+            <p>
+              Можно начать с нового магазина или обсудить перенос существующего
+              каталога. Сайт размещается на согласованном домене. Название,
+              логотип, товары и контент будут вашими.
+            </p>
+          </details>
+          <details>
+            <summary>Подойдёт ли Vector для магазина техники?</summary>
+            <p>
+              Да. Каталог поддерживает новую технику, б/у экземпляры и
+              аксессуары. У вариантов с разной памятью или цветом могут быть
+              отдельные цены, остатки и характеристики.
+            </p>
+          </details>
+          <details>
+            <summary>Что сотрудники смогут делать самостоятельно?</summary>
+            <p>
+              Добавлять товары и фотографии, менять цены и остатки, настраивать
+              категории и фильтры, обновлять контент и работать с заказами.
+              Первоначальный доступ и технические настройки готовит специалист.
+            </p>
+          </details>
+          <details>
+            <summary>Можно подключить 1С или МойСклад?</summary>
+            <p>
+              Импорт CSV уже доступен через специалиста. Готовые адаптеры 1С и
+              МойСклад пока не реализованы: подключение учётной системы и
+              правила обмена согласуются как отдельная работа.
+            </p>
+          </details>
+          <details>
+            <summary>Что входит в стоимость и что нужно для запуска?</summary>
+            <p>
+              Стоимость зависит от функций и объёма работ; отдельно обсуждаются
+              внедрение, подписка и сопровождение. До реальных продаж нужно
+              подготовить хостинг, хранение файлов, оплату и доставку. Тарифы и
+              сроки определяются после обсуждения вашего магазина.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section id="start" class="start">
+        <div class="container start-inner">
+          <div>
+            <p>Начните с обсуждения магазина</p>
+            <h2>Запустим ваш<br />интернет-магазин?</h2>
+          </div>
+          <div class="start-action">
+            <a class="button button-light" id="open-brief" href="#brief"
+              >Рассказать о магазине<svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6" /></svg
+            ></a>
+            <p>
+              Расскажите, что продаёте.<br />Обсудим функции, стоимость и
+              запуск.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="brief"
+        class="brief-section section container"
+        aria-labelledby="brief-title"
+      >
+        <div class="brief-heading">
+          <p class="section-note">Связаться с Vector</p>
+          <h2 id="brief-title">Обсудим запуск<br />вашего магазина.</h2>
+          <p>
+            Укажите ассортимент и задачу. Форма подготовит обращение — вы
+            проверите и отправите его в Telegram или по email.
+          </p>
+          <div class="contact-links">
+            <a
+              href="https://t.me/temmlu"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Telegram: @temmlu</a
+            ><a href="mailto:lugovoi.art@yandex.ru">lugovoi.art@yandex.ru</a>
+          </div>
+        </div>
+        <form id="brief-form">
+          <label for="business">Магазин или компания</label
+          ><input
+            id="business"
+            name="business"
+            placeholder="Название вашего магазина"
+            maxlength="120"
+            autocomplete="organization"
+            required
+          />
+          <label for="assortment">Что вы продаёте</label
+          ><select id="assortment" name="assortment">
+            <option>Новая и б/у техника</option>
+            <option>Только новая техника</option>
+            <option>Б/у техника</option>
+            <option>Аксессуары и электроника</option>
+            <option>Другой ассортимент</option>
+          </select>
+          <label for="task">С какой задачей нужна помощь</label
+          ><select id="task" name="task">
+            <option>Запустить интернет-магазин</option>
+            <option>Обновить существующий магазин</option>
+            <option>Навести порядок в каталоге и заказах</option>
+            <option>Обсудить возможности платформы</option>
+          </select>
+          <fieldset class="contact-channel">
+            <legend>Где удобнее обсудить</legend>
+            <label
+              ><input
+                type="radio"
+                name="channel"
+                value="telegram"
+                checked
+              />Telegram</label
+            ><label
+              ><input type="radio" name="channel" value="email" />Email</label
+            >
+          </fieldset>
+          <button class="button" type="submit" id="send-request">
+            <span>Написать в Telegram</span
+            ><svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </button>
+          <p id="channel-help" class="channel-help">
+            Откроется Telegram с готовым текстом. Сообщение отправляете вы.
+          </p>
+          <p
+            id="form-status"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <a id="message-link" class="message-link" hidden
+            >Открыть подготовленное сообщение</a
+          >
+          <noscript
+            ><p>
+              Напишите нам напрямую в
+              <a href="https://t.me/temmlu">Telegram</a> или на
+              <a href="mailto:lugovoi.art@yandex.ru">email</a>. Для подготовки
+              текста через форму включите JavaScript.
+            </p></noscript
+          >
+        </form>
+      </section>
+    </main>
+    <footer class="footer container">
+      <a class="wordmark" href="#" aria-label="Vector, к началу страницы"
+        ><img
+          class="brand-logo"
+          src="./assets/vector-logo-light.png"
+          width="640"
+          height="213"
+          alt="Vector"
+      /></a>
+      <p>Интернет-магазин и управление продажами.</p>
+      <div>
+        <a href="#platform">Платформа</a><a href="#start">Подключение</a
+        ><span>© 2026 Vector</span>
+      </div>
+      <small class="footer-note"
+        >Концепты интерфейсов и демонстрационные данные приведены для
+        иллюстрации. Иллюстрации товаров демонстрационные, часть создана с
+        помощью ИИ. Реальные оплата, доставка и внешние интеграции требуют
+        отдельной подготовки.</small
+      >
+    </footer>
+  </body>
+</html>
