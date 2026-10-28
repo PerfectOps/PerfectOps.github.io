@@ -211,7 +211,7 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   gap: 48px;
-  align-items: center;
+  align-items: start;
   padding-block: 64px 48px;
 }
 .hero-note {
@@ -1947,20 +1947,37 @@ h1 {
   }
 }
 
+.wordmark {
+  gap: 12px;
+  flex-shrink: 0;
+}
 .wordmark .brand-logo {
   display: block;
-  width: 184px;
-  height: 62px;
-  object-fit: contain;
-  object-position: left center;
+  width: 144px;
+  height: auto;
+}
+.wordmark .brand-symbol {
+  display: block;
+  width: 40px;
+  height: auto;
+}
+.header .wordmark img {
+  filter: invert(1);
 }
 .footer .wordmark .brand-logo {
-  width: 164px;
-  height: 55px;
+  width: 130px;
+}
+.footer .wordmark .brand-symbol {
+  width: 36px;
 }
 @media (max-width: 540px) {
+  .header .wordmark {
+    gap: 10px;
+  }
   .header .wordmark .brand-logo {
-    width: 134px;
-    height: 45px;
+    width: 108px;
+  }
+  .header .wordmark .brand-symbol {
+    width: 30px;
   }
 }

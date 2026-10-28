@@ -32,7 +32,7 @@ form.addEventListener("submit", (event) => {
   );
   if (!form.reportValidity()) return;
   const text = [
-    "Здравствуйте! Хочу обсудить запуск магазина на Vector.",
+    "Здравствуйте! Хочу обсудить запуск магазина на UZEL.",
     "",
     "Магазин: " + business.value.trim(),
     "Ассортимент: " + form.elements.assortment.value,
@@ -43,7 +43,7 @@ form.addEventListener("submit", (event) => {
   const email = form.elements.channel.value === "email";
   const url = email
     ? "mailto:lugovoi.art@yandex.ru?subject=" +
-      encodeURIComponent("Запуск интернет-магазина на Vector") +
+      encodeURIComponent("Запуск интернет-магазина на UZEL") +
       "&body=" +
       encodeURIComponent(text)
     : "https://t.me/temmlu?text=" + encodeURIComponent(text);
