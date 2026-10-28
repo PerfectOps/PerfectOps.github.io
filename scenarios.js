@@ -117,7 +117,7 @@ function renderScenario(index, announce = false) {
   appProduct.querySelector("small").textContent = price;
   cartItems = 0;
   count.textContent = "0";
-  resetDemo.hidden = true;
+  if (resetDemo) resetDemo.hidden = true;
   scenarioButtons.forEach((button, buttonIndex) =>
     button.setAttribute("aria-pressed", String(buttonIndex === index)),
   );
@@ -161,7 +161,7 @@ function scheduleScenario() {
   scenarioTimer = setTimeout(() => {
     switchScenario((scenarioIndex + 1) % scenarios.length);
     scheduleScenario();
-  }, 2000);
+  }, 5000);
 }
 scenarioButtons.forEach((button, index) =>
   button.addEventListener("click", () => {

@@ -93,11 +93,11 @@ for (const button of document.querySelectorAll(".demo-add")) {
   button.addEventListener("click", () => {
     cartItems += 1;
     count.textContent = String(cartItems);
-    resetDemo.hidden = false;
+    if (resetDemo) resetDemo.hidden = false;
     demoStatus.textContent = `${button.dataset.product}: добавлено в демо-корзину. Реальная покупка недоступна.`;
   });
 }
-resetDemo.addEventListener("click", () => {
+resetDemo?.addEventListener("click", () => {
   cartItems = 0;
   count.textContent = "0";
   resetDemo.hidden = true;
